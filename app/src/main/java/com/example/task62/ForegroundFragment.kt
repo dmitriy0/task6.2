@@ -36,6 +36,8 @@ class ForegroundFragment : Fragment() {
         var k = 2.0
         var sum = BigDecimal(2.0)
 
+        job = Job()
+
         parentFragmentManager.setFragmentResultListener("requestKey", this) { key, bundle ->
             when (bundle.getString("state")!!) {
 
@@ -82,8 +84,6 @@ class ForegroundFragment : Fragment() {
                     }
                 }
             }
-
-
         }
 
         return view
